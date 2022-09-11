@@ -296,12 +296,12 @@ button {
     flex-direction: column;
   }
 
-  body {
-    margin-top: 10rem;
-  }
-
   .app {
     width: 90%;
+  }
+
+  body {
+    overflow: visible;
   }
 
   .clock {
