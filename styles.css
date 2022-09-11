@@ -171,7 +171,7 @@ button {
 }
 
 :root {
-  --s: 100s;
+  --s: 1500s;
   --dawn: #efc2ca;
   --morning: #2998f1;
   --sunset: #f08da9;
