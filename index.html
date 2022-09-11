@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circadian Work</title>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="fs-300">
+    <div id="sky-bg"></div>
+    <div class="app block">
+      <section class="section-top-btn">
+        <div class="btn-container flex">
+          <button class="mode-selector active fs-300" data-mode="pomodoro" id="btn-pomodoro">Pomodoro</button>
+          <button class="mode-selector fs-300" data-mode="shortBreak" id="btn-short-break">Short Break</button>
+          <button class="mode-selector fs-300" data-mode="longBreak" id="btn-long-break">Long Break</button>
+        </div>
+      </section>
+
+      <section class="section-clock">
+        <div class="clock block"><span id="main-timer" class="fs-600"></span></div>
+      </section>
+
+      <section class="section-start-btn flex">
+        <button class="main-button button" data-action="start" id="btn-start">Start</button>
+        <button class="main-button button hidden" data-action="stop" id="btn-stop">Stop</button>
+      </section>
+    </div>
+  </body>
+</html>

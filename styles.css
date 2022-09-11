@@ -1,0 +1,258 @@
+/*?                                 Reset */
+
+/* #region */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  line-height: 1.5;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}*/
+
+/* #endregion */
+
+/*-                           Custom Prop */
+
+:root {
+  --pomodoro: #222;
+  --shortBreak: rgb(17, 32, 70);
+  --longBreak: #230505;
+}
+
+/*#                                Styles */
+
+body {
+  background-color: var(--pomodoro);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.app {
+  width: 30%;
+  border: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn-container {
+  margin: 2rem auto;
+}
+
+.clock {
+  color: #222;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 8rem;
+}
+
+button {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.mode-selector {
+  text-transform: lowercase;
+  border-radius: 7px;
+  background-color: #fcd871;
+  border: 1px solid #fcd871;
+  transition: all 0.5s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 1rem;
+}
+
+.mode-selector:hover {
+  background-color: #fff5e864;
+}
+
+.main-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 5rem;
+  text-transform: lowercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 4rem;
+  color: #fff;
+  border-radius: 7px;
+  background-color: #3fc583;
+  border: 1px solid #3fc583;
+  transition: all 0.5s;
+  margin: 2rem 0.5rem;
+}
+
+.main-button:hover {
+  background-color: #fff5e864;
+}
+
+#btn-stop {
+  background-color: #f08da9;
+  border: 1px solid #f08da9;
+}
+
+#btn-stop:hover {
+  background-color: #f4c0b3;
+  border: 1px solid #f08da9;
+  color: #222;
+}
+
+:root {
+  --s: 100s;
+  --dawn: #efc2ca;
+  --morning: #2998f1;
+  --sunset: #f08da9;
+  --evening: #6c44b9;
+  --night: #09279b;
+  --midnight: #011152;
+}
+
+#sky-bg {
+  background: conic-gradient(var(--midnight), var(--night), var(--evening), var(--sunset), var(--morning), var(--dawn), var(--midnight));
+  aspect-ratio: 1 / 1;
+  transform: rotate(40deg);
+  border-radius: 50%;
+  left: -500vw;
+  top: -50vh;
+  position: fixed;
+  width: 1000vw;
+  z-index: 0;
+}
+
+.animation-go {
+  animation: rotate var(--s) linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(400deg);
+  }
+}
+
+/*!                       Utility Classes */
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block {
+  display: block;
+}
+
+.active {
+  transform: scale(1.1);
+  background-color: #bce4e3;
+  color: #333;
+  border: 3px solid #3fc583;
+}
+
+.hidden {
+  display: none;
+}
+
+.fs-100 {
+  font-weight: 100;
+}
+.fs-300 {
+  font-weight: 300;
+}
+.fs-600 {
+  font-weight: 600;
+}
+
+/*%                         Media Queries */
+
+@media screen and (max-width: 480px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .app {
+    width: 90%;
+  }
+
+  .clock {
+    font-size: 6rem;
+  }
+
+  .mode-selector {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+}
