@@ -204,6 +204,47 @@ button {
   }
 }
 
+.jullia-verification {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 25%;
+  height: 20rem;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.jullia-verification h2 {
+  margin: 0rem auto 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.jullia-verification h3 {
+  width: 100%;
+}
+
+#input-jullia {
+  display: block;
+  margin: 1rem auto;
+  text-transform: lowercase;
+}
+
+.button-jullia,
+.button-jullia-proceed {
+  display: block;
+  margin: 1rem auto;
+  text-transform: lowercase;
+}
+
 /*!                       Utility Classes */
 .flex {
   display: flex;
@@ -236,6 +277,18 @@ button {
   font-weight: 600;
 }
 
+.button {
+  border-radius: 7px;
+}
+
+.container-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /*%                         Media Queries */
 
 @media screen and (max-width: 480px) {
@@ -254,5 +307,11 @@ button {
   .mode-selector {
     font-size: 0.8rem;
     margin: 0.5rem 0;
+  }
+
+  /* CSS Jullia */
+  .jullia-verification {
+    width: 98%;
+    height: 30rem;
   }
 }

@@ -130,3 +130,35 @@ function startCountDown() {
     console.log(timeStorage);
   }, 1000);
 }
+
+// Verificação Jullia
+
+const julliaBtn = document.getElementById("btn-jullia");
+const julliaInput = document.getElementById("input-jullia");
+const julliaYesMsg = document.getElementById("jullia-proceed");
+const julliaNoMsg = document.getElementById("jullia-not-proceed");
+const julliaH2 = document.getElementById("jullia-h2");
+const julliaSeguir = document.getElementById("btn-jullia-proceed");
+const julliaModal = document.getElementById("jullia-ver");
+
+julliaBtn.addEventListener("click", julliaVerification);
+
+function julliaVerification() {
+  let validationJullia = julliaInput.value;
+
+  julliaInput.style.display = "none";
+  julliaBtn.classList.add("hidden");
+  julliaH2.classList.add("hidden");
+
+  if (validationJullia == "Jullia" || validationJullia == "jullia") {
+    console.log("É ela");
+    julliaYesMsg.classList.remove("hidden");
+  } else {
+    console.log("Não é ela");
+    julliaNoMsg.classList.remove("hidden");
+  }
+}
+
+julliaSeguir.addEventListener("click", function () {
+  julliaModal.classList.add("hidden");
+});
